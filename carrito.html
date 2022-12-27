@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tienda Online</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+	<!-- cabezera carrito de compra -->
+	<header>
+		<p id="nombre-contenedor">${nombreStore}</p>
+		<h1>Tienda online</h1>
+		<button id="cesta-carrito">
+			<i class='bx bxs-shopping-bag'></i><span id="contador-carrito">0</span>
+		</button>
+	</header>
+
+	<!-- contenedor productos -->
+	<main id="producto-contenedor">
+	</main>
+
+	<!-- modal carrito -->
+	<div class="modal-contenedor">
+		<div class="modal-carrito">
+			<h3 class="carrito-titulo">Carrito de Compras</h3>
+			<br><hr><br>
+			<button id="btn-cerrar-carrito"><i class='bx bx-x'></i></button>
+			<div id="carrito-contenedor"></div>
+			<br><hr><br>
+			<div id="cuotas-contenedor"></div>
+			<br><hr><br>
+			<p class="precioProductoSinCuotas">TOTAL <b>SIN</b> CUOTAS: $<span id="precioTotalSinCuotas"></span></p>
+			<p class="precioProducto">TOTAL <b>CON</b> CUOTAS: $<span id="precioTotal"></span></p>
+			<button id="finCompra" class="fin-compra">Finalizar compra</button>
+		</div>
+	</div>
+
+	<script src="src/components/data/products.js"></script>
+	<script src="src/components/cart/modal.js"></script>
+	<script src="src/components/cart/cart.js"></script>
+	<script src="src/App.js"></script>
+	<script src="src/index.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>
