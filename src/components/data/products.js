@@ -1,4 +1,4 @@
-const productos =
+/* const productosTest =
     [
         {
             id: 1,
@@ -90,4 +90,4 @@ const productos =
             img: '/assets/img/9.jpg',
             cantidad: 1
         }
-    ];
+    ]; */

@@ -1,5 +1,8 @@
-const pintarProductos = () => {
+const pintarProductos = async () => {
+
     const contenedor = document.getElementById("producto-contenedor");
+
+    const productos = await indexController();
 
     productos.map(producto => {
         const div = document.createElement('div');
@@ -11,7 +14,6 @@ const pintarProductos = () => {
                         <div class="card-content">
                             <p>${producto.desc}</p>
                             <br>
-                            <p><b>Número:</b> ${producto.numero}</p>
                             <p><b>Precio:</b> $${producto.precio}</p>
                             <button id=${producto.id} class="btn-add agregar">Añadir al carrito</button>
                         </div>

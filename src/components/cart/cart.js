@@ -21,7 +21,8 @@ productoContenedor.addEventListener('click', (e) => {
 });
 
 /* valida producto repetido de carrito */
-const validarProductoRepetido = (productoId) => {
+const validarProductoRepetido = async (productoId) => {
+    const productos = await indexController();
     const productoRepetido = carrito.find(producto => producto.id == productoId);
 
     if (!productoRepetido) {
@@ -190,7 +191,6 @@ finCompra.addEventListener('click', () => {
     carrito = [];
     cerrarCarrito.click();
     localStorage.removeItem('carrito');
-    localStorage.removeItem('nombre');
     Swal.fire({
         title: '¿Deseas finalizar tu compra?',
         text: "Si aceptas, la compra de tus productos se realizará",
